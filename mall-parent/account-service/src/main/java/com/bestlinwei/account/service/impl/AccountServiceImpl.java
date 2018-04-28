@@ -2,11 +2,8 @@ package com.bestlinwei.account.service.impl;
 
 import java.util.List;
 
-import com.bestlinwei.account.mapper.AccAddressMapper;
 import com.bestlinwei.account.mapper.AccountMapper;
 import com.bestlinwei.account.service.IAccountService;
-import com.bestlinwei.common.bean.account.AccAddress;
-import com.bestlinwei.common.bean.account.AccAddressCriteria;
 import com.bestlinwei.common.bean.account.Account;
 import com.bestlinwei.common.bean.account.AccountCriteria;
 import org.apache.commons.collections.CollectionUtils;
@@ -23,14 +20,6 @@ public class AccountServiceImpl implements IAccountService {
 
 	@Autowired
 	AccountMapper accountMapper;
-
-	@Autowired
-	AccAddressMapper addressMapper;
-
-	@Override
-	public AccAddress getAccAddress(String tid) {
-		return null;
-	}
 
 	@Override
 	public Account login(String phone, String password) {
@@ -56,14 +45,6 @@ public class AccountServiceImpl implements IAccountService {
 		int result = accountMapper.insertSelective(account);
 		logger.info("{}注册成功！",phone);
 		return result > 0 ? true : false;
-	}
-
-	@Override
-	public List<AccAddress> getAddressList(String accountId) {
-		AccAddressCriteria criteria = new AccAddressCriteria();
-		criteria.createCriteria().andAccountIdEqualTo(accountId);
-		List<AccAddress> list = addressMapper.selectByExample(criteria);
-		return list;
 	}
 
 }

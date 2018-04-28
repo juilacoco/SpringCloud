@@ -17,7 +17,6 @@ import org.springframework.transaction.annotation.TransactionManagementConfigure
 
 @Configuration
 @EnableTransactionManagement
-@MapperScan("com.bestlinwei.account.mapper")
 public class SqlSessionFactoryConfig implements TransactionManagementConfigurer {
 
     @Autowired

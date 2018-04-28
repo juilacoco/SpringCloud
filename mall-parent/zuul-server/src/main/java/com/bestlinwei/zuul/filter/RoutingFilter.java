@@ -1,6 +1,7 @@
 package com.bestlinwei.zuul.filter;
 
 import com.netflix.zuul.ZuulFilter;
+import com.netflix.zuul.context.RequestContext;
 
 public class RoutingFilter extends ZuulFilter {
     @Override
@@ -10,7 +11,7 @@ public class RoutingFilter extends ZuulFilter {
 
     @Override
     public int filterOrder() {
-        return 0;
+        return 9;
     }
 
     @Override
@@ -20,6 +21,11 @@ public class RoutingFilter extends ZuulFilter {
 
     @Override
     public Object run() {
+        RequestContext ctx = RequestContext.getCurrentContext();
+        System.out.println("路由=============");
+        if (ctx.getBoolean("LimitAccess")) {//token验证通过
+
+        }
         return null;
     }
 }

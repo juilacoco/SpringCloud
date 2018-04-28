@@ -4,6 +4,8 @@ import com.bestlinwei.account.service.IAccountService;
 import com.bestlinwei.common.bean.account.Account;
 import com.bestlinwei.common.constant.SystemConstants;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -12,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * 个人账户
  * 
- * @author guooo
+ * @author LINWEI
  *
  */
 @RestController
@@ -21,6 +23,19 @@ public class AccountController {
 
 	@Autowired
 	IAccountService accountService;
+
+	@Autowired
+	DiscoveryClient discoveryClient;    //自动注入DiscoveryClinet
+
+	@RequestMapping(value = "/hello" , method = RequestMethod.GET)
+	public String sayHello(){
+
+		ServiceInstance serviceInstance = discoveryClient.getLocalServiceInstance();    //获得service实例
+
+		System.out.println("/hello , host:"+serviceInstance.getHost()+"/n"+"/service_id:"+serviceInstance.getServiceId());
+
+		return "成功访问服务";
+	}
 
 	/**
 	 * 登陆

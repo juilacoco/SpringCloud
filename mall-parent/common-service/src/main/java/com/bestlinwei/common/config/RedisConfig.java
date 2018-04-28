@@ -8,9 +8,9 @@ package com.bestlinwei.common.config;
  */
 public class RedisConfig {
 
-	public static final String REDIS_IP = "192.168.1.102";
+	public static final String REDIS_IP = "47.52.144.196";
 	
-	public static final String AUTH = "a588a026b91c424cb7fa13267eb80e96";
+	public static final String AUTH = "bestlinwei.17";
 
 	public static final int PORT = 6379;
 

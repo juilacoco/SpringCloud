@@ -3,278 +3,73 @@ package com.bestlinwei.common.bean.account;
 import java.util.Date;
 
 public class Account {
-    /**
-     * 
-     * 表 : tb_acc_account
-     * 对应字段 : tid
-     */
-    private String tid;
+    private String id;
 
-    /**
-     * 手机号
-     * 表 : tb_acc_account
-     * 对应字段 : phone
-     */
-    private String phone;
+    private String userName;
 
-    /**
-     * 邮件
-     * 表 : tb_acc_account
-     * 对应字段 : email
-     */
-    private String email;
-
-    /**
-     * 密码
-     * 表 : tb_acc_account
-     * 对应字段 : password
-     */
     private String password;
 
-    /**
-     * 
-     * 表 : tb_acc_account
-     * 对应字段 : create_by
-     */
-    private String createBy;
+    private String phone;
 
-    /**
-     * 
-     * 表 : tb_acc_account
-     * 对应字段 : create_date
-     */
-    private Date createDate;
+    private String email;
 
-    /**
-     * 
-     * 表 : tb_acc_account
-     * 对应字段 : update_by
-     */
-    private String updateBy;
+    private Date createTime;
 
-    /**
-     * 
-     * 表 : tb_acc_account
-     * 对应字段 : update_date
-     */
-    private Date updateDate;
+    private Date updateTime;
 
-    /**
-     * 
-     * 表 : tb_acc_account
-     * 对应字段 : remark
-     */
-    private String remark;
-
-    /**
-     * 
-     * 表 : tb_acc_account
-     * 对应字段 : version
-     */
-    private Integer version;
-
-    /**
-     * 
-     * 表 : tb_acc_account
-     * 对应字段 : state
-     */
-    private Integer state;
-
-    /**
-     * get method 
-     *
-     * @return tb_acc_account.tid：
-     */
-    public String getTid() {
-        return tid;
+    public String getId() {
+        return id;
     }
 
-    /**
-     * set method 
-     *
-     * @param tid  
-     */
-    public void setTid(String tid) {
-        this.tid = tid == null ? null : tid.trim();
+    public void setId(String id) {
+        this.id = id == null ? null : id.trim();
     }
 
-    /**
-     * get method 
-     *
-     * @return tb_acc_account.phone：手机号
-     */
-    public String getPhone() {
-        return phone;
+    public String getUserName() {
+        return userName;
     }
 
-    /**
-     * set method 
-     *
-     * @param phone  手机号
-     */
-    public void setPhone(String phone) {
-        this.phone = phone == null ? null : phone.trim();
+    public void setUserName(String userName) {
+        this.userName = userName == null ? null : userName.trim();
     }
 
-    /**
-     * get method 
-     *
-     * @return tb_acc_account.email：邮件
-     */
-    public String getEmail() {
-        return email;
-    }
-
-    /**
-     * set method 
-     *
-     * @param email  邮件
-     */
-    public void setEmail(String email) {
-        this.email = email == null ? null : email.trim();
-    }
-
-    /**
-     * get method 
-     *
-     * @return tb_acc_account.password：密码
-     */
     public String getPassword() {
         return password;
     }
 
-    /**
-     * set method 
-     *
-     * @param password  密码
-     */
     public void setPassword(String password) {
         this.password = password == null ? null : password.trim();
     }
 
-    /**
-     * get method 
-     *
-     * @return tb_acc_account.create_by：
-     */
-    public String getCreateBy() {
-        return createBy;
+    public String getPhone() {
+        return phone;
     }
 
-    /**
-     * set method 
-     *
-     * @param createBy  
-     */
-    public void setCreateBy(String createBy) {
-        this.createBy = createBy == null ? null : createBy.trim();
+    public void setPhone(String phone) {
+        this.phone = phone == null ? null : phone.trim();
     }
 
-    /**
-     * get method 
-     *
-     * @return tb_acc_account.create_date：
-     */
-    public Date getCreateDate() {
-        return createDate;
+    public String getEmail() {
+        return email;
     }
 
-    /**
-     * set method 
-     *
-     * @param createDate  
-     */
-    public void setCreateDate(Date createDate) {
-        this.createDate = createDate;
+    public void setEmail(String email) {
+        this.email = email == null ? null : email.trim();
     }
 
-    /**
-     * get method 
-     *
-     * @return tb_acc_account.update_by：
-     */
-    public String getUpdateBy() {
-        return updateBy;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    /**
-     * set method 
-     *
-     * @param updateBy  
-     */
-    public void setUpdateBy(String updateBy) {
-        this.updateBy = updateBy == null ? null : updateBy.trim();
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
-    /**
-     * get method 
-     *
-     * @return tb_acc_account.update_date：
-     */
-    public Date getUpdateDate() {
-        return updateDate;
+    public Date getUpdateTime() {
+        return updateTime;
     }
 
-    /**
-     * set method 
-     *
-     * @param updateDate  
-     */
-    public void setUpdateDate(Date updateDate) {
-        this.updateDate = updateDate;
-    }
-
-    /**
-     * get method 
-     *
-     * @return tb_acc_account.remark：
-     */
-    public String getRemark() {
-        return remark;
-    }
-
-    /**
-     * set method 
-     *
-     * @param remark  
-     */
-    public void setRemark(String remark) {
-        this.remark = remark == null ? null : remark.trim();
-    }
-
-    /**
-     * get method 
-     *
-     * @return tb_acc_account.version：
-     */
-    public Integer getVersion() {
-        return version;
-    }
-
-    /**
-     * set method 
-     *
-     * @param version  
-     */
-    public void setVersion(Integer version) {
-        this.version = version;
-    }
-
-    /**
-     * get method 
-     *
-     * @return tb_acc_account.state：
-     */
-    public Integer getState() {
-        return state;
-    }
-
-    /**
-     * set method 
-     *
-     * @param state  
-     */
-    public void setState(Integer state) {
-        this.state = state;
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
     }
 }

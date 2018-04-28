@@ -1,10 +1,8 @@
 package com.bestlinwei.common.constant;
 
 /**
+ * @author LINWEI
  * 系统常量
- * 
- * @author guooo
- *
  */
 public interface SystemConstants {
 	public static final String API_KEY = "9223a431a6e24355901e95a521bb3455";

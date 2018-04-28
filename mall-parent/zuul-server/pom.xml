@@ -32,6 +32,12 @@
             <artifactId>spring-boot-admin-starter-client</artifactId>
             <version>1.4.6</version>
         </dependency>
+        <!-- 添加common依赖 -->
+        <dependency>
+            <groupId>com.bestlinwei</groupId>
+            <artifactId>common-service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
